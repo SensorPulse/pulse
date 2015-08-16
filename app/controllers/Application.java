@@ -12,7 +12,7 @@ public class Application extends Controller {
     }
 
     public Result testPage() {
-        return ok(index.render("this is a test page"));
+        return ok("<h1>Pulse Sensor</h1>").as("text/html");
     }
 
 }
