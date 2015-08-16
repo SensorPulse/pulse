@@ -11,4 +11,8 @@ public class Application extends Controller {
         return ok(index.render("Your new application is ready."));
     }
 
+    public Result testPage() {
+        return ok(index.render("this is a test page"));
+    }
+
 }
