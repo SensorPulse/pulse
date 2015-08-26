@@ -30,6 +30,9 @@ public class Home extends Controller {
         try (Stream<String> stream = Files.lines(path)){
             last = stream.mapToInt(n -> Integer.parseInt(n))
                               .reduce((a, b) -> b).getAsInt();
+        //reduce((a, b) -> b) is a simple and relatively efficient way to return the last element
+            //of the stream. see http://stackoverflow.com/questions/27547519/most-efficient-way-to-get-the-last-element-of-a-stream
+
         }catch (IOException e) {
             Logger.error("file io error when reading data from file");
             e.printStackTrace();
