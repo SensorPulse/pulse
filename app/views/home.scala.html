@@ -1,4 +1,4 @@
-@(last: Int)
+@(last: Int)(max: Int)(average: Int)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -126,18 +126,18 @@
         <div class="col-lg-4">
           <div>
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          <div class="heart-rate">67</div>
+          <div class="heart-rate">@max</div>
           </div>
-          <h2 class="rate-text">Placeholder 2</h2>
+          <h2 class="rate-text">Max heart rate reached</h2>
           <p>blah blah blah </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
         <div>
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-           <div class="heart-rate">88</div>
+           <div class="heart-rate">@average</div>
            </div>
-          <h2 class="rate-text">Placeholder 3</h2>
+          <h2 class="rate-text">Average heart rate</h2>
           <p>blah blah blah</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->

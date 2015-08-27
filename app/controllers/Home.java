@@ -17,7 +17,7 @@ public class Home extends Controller {
 
     public Result index() {
         readData();
-        return ok(home.render(last));
+        return ok(home.render(last, max, average));
     }
 
     private void readData(){
