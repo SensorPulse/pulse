@@ -13,14 +13,15 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class Home extends Controller {
+    int last = 0 , max = 0, average = 0;
 
     public Result index() {
         readData();
-        return ok(home.render());
+        return ok(home.render(last));
     }
 
     private void readData(){
-        int last = 0 , max = 0, average = 0;
+
 
         Logger.info("retrieving data from file");
         Path path = Paths.get("./data.txt");
@@ -29,7 +30,7 @@ public class Home extends Controller {
         //change to stream once into a arraylist and process there.
         try (Stream<String> stream = Files.lines(path)){
             last = stream.mapToInt(n -> Integer.parseInt(n))
-                              .reduce((a, b) -> b).getAsInt();
+                    .reduce((a, b) -> b).getAsInt();
         //reduce((a, b) -> b) is a simple and relatively efficient way to return the last element
             //of the stream. see http://stackoverflow.com/questions/27547519/most-efficient-way-to-get-the-last-element-of-a-stream
 
