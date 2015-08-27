@@ -2,12 +2,12 @@
 	background-color: grey;
 }
 
-#heart-rate {
+.heart-rate {
 	font-size: 300%;
 	margin-top: -95px;
 	color: white;
 }
 
-#rate-text {
+.rate-text {
 	margin-top: 50px;
 }
