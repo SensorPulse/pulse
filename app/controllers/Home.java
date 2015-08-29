@@ -26,11 +26,10 @@ public class Home extends Controller {
 
 
         Logger.info("retrieving data from file");
-        File abc = Play.application().getFile("conf/data.txt");
-        InputStream dcd = Play.application().resourceAsStream("./public/data.txt");
-        Path path = Paths.get(abc.getAbsolutePath());
-        System.out.println("Data relative path: " + abc.getAbsolutePath());
-        System.out.println("Data path : " + abc.getPath());
+        File datafile = Play.application().getFile("conf/data.txt");
+
+        Path path = Paths.get(datafile.getAbsolutePath());
+
         //TODO not efficient to stream 3 times.
         //change to stream once into a arraylist and process there.
         try (Stream<String> stream = Files.lines(path)){
