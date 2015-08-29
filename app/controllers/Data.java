@@ -14,7 +14,7 @@ import java.nio.file.StandardOpenOption;
 public class Data extends Controller {
     public Result save(int data){
         Logger.info("received data: " + data);
-        Path path = Paths.get("./data.txt");
+        Path path = Paths.get("./public/data.txt");
         try {
             Files.write(path, (String.valueOf(data) + "\n").getBytes() , StandardOpenOption.APPEND);
         } catch (IOException e) {

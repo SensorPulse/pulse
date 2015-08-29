@@ -24,7 +24,8 @@ public class Home extends Controller {
 
 
         Logger.info("retrieving data from file");
-        Path path = Paths.get("./data.txt");
+
+        Path path = Paths.get("./public/data.txt");
 
         //TODO not efficient to stream 3 times.
         //change to stream once into a arraylist and process there.
