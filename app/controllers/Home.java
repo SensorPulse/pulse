@@ -26,7 +26,7 @@ public class Home extends Controller {
 
 
         Logger.info("retrieving data from file");
-        File abc = Play.application().getFile("/public/data.txt");
+        File abc = Play.application().getFile("conf/data.txt");
         InputStream dcd = Play.application().resourceAsStream("./public/data.txt");
         Path path = Paths.get(abc.getAbsolutePath());
         System.out.println("Data relative path: " + abc.getAbsolutePath());
