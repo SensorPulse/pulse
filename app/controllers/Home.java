@@ -5,7 +5,9 @@ import play.mvc.*;
 
 import views.html.*;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -24,9 +26,11 @@ public class Home extends Controller {
 
 
         Logger.info("retrieving data from file");
-
-        Path path = Paths.get("./public/data.txt");
-
+        File abc = Play.application().getFile("/public/data.txt");
+        InputStream dcd = Play.application().resourceAsStream("./public/data.txt");
+        Path path = Paths.get(abc.getAbsolutePath());
+        System.out.println("Data relative path: " + abc.getAbsolutePath());
+        System.out.println("Data path : " + abc.getPath());
         //TODO not efficient to stream 3 times.
         //change to stream once into a arraylist and process there.
         try (Stream<String> stream = Files.lines(path)){
