@@ -1,4 +1,2 @@
-This is an IOT project using a pulse senor
-=================================
-
-This file will be packaged with your application, when using `activator dist`.
+This is an simple IOT project using a pulse sensor.
+This is not a real application. That is why there are some bad practices, including clear a data file using a GET call. However, the purpose of this demo project is to just provide a few simple RESTful APIs for the sensor or web client, so such bad practice is allowed.
